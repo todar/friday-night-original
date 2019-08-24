@@ -3,6 +3,7 @@ import logo from "../resources/favicon.ico";
 import M from "materialize-css";
 
 function Navbar() {
+  // These are the links for both the navbar and sidebar.
   const [links] = useState([
     {
       title: "Girls Night",
@@ -18,6 +19,7 @@ function Navbar() {
     }
   ]);
 
+  // For both sidebar and navbar have the same links. Staying DRY.
   const paths = links.map(({ title, path }) => (
     <li key={title}>
       <a href={path} alt={title}>
@@ -26,6 +28,7 @@ function Navbar() {
     </li>
   ));
 
+  // On mount I want to initilize the sidebar trigger.
   useEffect(() => {
     M.Sidenav.init(document.querySelectorAll(".sidenav"), {});
     return () => {};
