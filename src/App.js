@@ -1,11 +1,13 @@
 import React from "react";
-import "./App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Friday Night Home Group</h1>
-    </div>
+    <React.Fragment>
+      <Navbar />
+      <Hero />
+    </React.Fragment>
   );
 }
 
