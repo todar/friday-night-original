@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../resources/favicon.ico";
+import logo from "../resources/logo.png";
 import M from "materialize-css";
 
 function Navbar() {
@@ -39,9 +39,13 @@ function Navbar() {
       <nav className="grey darken-4">
         <div className="container">
           <a href="#!" className="brand-logo">
-            <img style={{ marginTop: ".4rem" }} src={logo} alt="Logo" />
+            <img
+              style={{ marginTop: ".5rem", borderRadius: "5px" }}
+              src={logo}
+              alt="Logo"
+            />
           </a>
-          <a href="#!" data-target="mobile-demo" className="sidenav-trigger">
+          <a href="#" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>
           </a>
 
