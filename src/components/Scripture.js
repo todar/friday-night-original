@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * These are the scriptures that the group stands by and are read
+ * each week. Contains verse reference, scripture, and cite.
+ */
 function Scripture() {
   return (
     <section className="grey darken-3 white-text section">
@@ -22,7 +26,7 @@ function Scripture() {
         <div className="divider"></div>
         <article className="row">
           <div className="col s12 center">
-            <h3 style={{ marginBottom: 0 }}>John 13:35</h3>
+            <h3>John 13:35</h3>
           </div>
           <div className="col s12 center">
             <p className="yellow-text accent-2 flow-text">

@@ -41,7 +41,7 @@ function Navbar() {
           <a href="#!" className="brand-logo">
             <img style={{ marginTop: ".4rem" }} src={logo} alt="Logo" />
           </a>
-          <a href="#" data-target="mobile-demo" className="sidenav-trigger">
+          <a href="#!" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>
           </a>
 
