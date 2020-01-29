@@ -26,7 +26,7 @@ export default ({ data }) => {
                 <ListItem button>
                   <ListItemAvatar>
                     <Avatar>
-                      <MusicNote />
+                      <MusicNote color="inherit" />
                     </Avatar>
                   </ListItemAvatar>
                   <ListItemText primary={node.frontmatter.title} secondary={node.frontmatter.author} />
@@ -36,8 +36,6 @@ export default ({ data }) => {
             </div>
           ))}
         </List>
-
-        {/* <span>{data.allMarkdownRemark.totalCount} Songs</span> */}
       </Container>
     </Layout>
   );

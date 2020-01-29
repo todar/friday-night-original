@@ -5,9 +5,7 @@ import Box from "@material-ui/core/Box";
 import Card from "@material-ui/core/Card";
 import styled from "styled-components";
 import image from "../images/home-group.jpg";
-
 import CardContent from "@material-ui/core/CardContent";
-
 import Typography from "@material-ui/core/Typography";
 
 const Section = styled.section`

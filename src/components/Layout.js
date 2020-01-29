@@ -1,19 +1,10 @@
 import React from "react";
+import Fade from "@material-ui/core/Fade";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import styled from "styled-components";
-import Fab from "@material-ui/core/Fab";
-import QueueMusic from "@material-ui/icons/QueueMusic";
-import Navbar from "./Navbar";
 
-const StyledFab = styled(Fab)`
-  margin: 0px;
-  top: auto;
-  right: 20px;
-  bottom: 20px;
-  left: auto;
-  position: fixed;
-`;
+// import QueueMusic from "@material-ui/icons/QueueMusic";
+import Navbar from "./Navbar";
 
 const theme = createMuiTheme({
   palette: {
@@ -31,15 +22,18 @@ const theme = createMuiTheme({
 });
 
 function Layout({ children, showback = false }) {
+  const [filter, setFilter] = React.useState("");
+
+  console.log("Layout is rendered");
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Navbar showback={showback} />
-      <div style={{ marginTop: "60px" }}>{children}</div>
-
-      <StyledFab color="secondary" aria-label="edit">
-        <QueueMusic />
-      </StyledFab>
+      <div id="back-to-top-anchor" />
+      <Navbar showback={showback} filter={filter} setFilter={setFilter} />
+      <Fade in={true}>
+        <div style={{ marginTop: "60px" }}>{children}</div>
+      </Fade>
     </ThemeProvider>
   );
 }
